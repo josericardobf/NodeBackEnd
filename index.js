@@ -1,18 +1,12 @@
 const express = require('express');
+const consign = require('consign');
 
 const PORT = 3000;
 
 const app = express();
 
-//app.get("/", (req,res) => res.json({status: "Node js backend"}));
+app.set("json spaces", 4);
 
-app.get("/clientes", (req, res) => {
-    res.json(
-        [
-            {'codigo': 1, 'nome': 'unilever'},
-            {'codigo': 2, 'nome': 'bombril'},
-        ]
-    )
-});
+consign().include("models").then("routes").into(app);
 
 app.listen(PORT, () => console.log("Escutando na porta " + PORT));
