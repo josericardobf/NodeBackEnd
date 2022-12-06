@@ -14,7 +14,7 @@
     "babel-cli": "^6.26.0",
     "consign": "^0.1.6",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "mysql2": "^1.6.5",
     "sequelize": "^5.8.12",
     "supervisor": "^0.12.0"
